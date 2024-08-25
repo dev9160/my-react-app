@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header/header';
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home } from '@mui/icons-material';
+import  Home from './pages/Home/home';
 import Sidebar from './components/Sidebar/sidebar';
 
 function App() {
