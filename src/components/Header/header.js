@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import logo from '../../assets/images/IR_Logo.png';
 import emblemlogo from '../../assets/images/Emblem_of_India.png';
 import Button from '@mui/material/Button';
-import { MdMenuOpen } from "react-icons/md";
-import { MdOutlineLightMode } from "react-icons/md";
+import { MdMenuOpen, MdOutlineMenu } from "react-icons/md";
 import { FaRegBell } from "react-icons/fa6";
-import SearchBox from '../../components/Search/searchbox';
+import { MyContext } from "../../App";
+import React, { useContext } from 'react';
 
 const Header = ()=>{
+    const context = useContext(MyContext)
+
     return (
         <>
             <header className="d-flex align-items-center">
@@ -22,12 +24,14 @@ const Header = ()=>{
                         </div>
 
                         <div className="col-sm-3 d-flex align-item-center part2 pl-4">
-                            <Button className="rounded-circle"><MdMenuOpen/> </Button>
-                            <SearchBox />
+                            <Button className="rounded-circle mr-3" onClick={()=> context.setIsToggleSidebar(!context.isToggleSidebar)}>
+                                {
+                                    context.isToggleSidebar === false ? <MdMenuOpen /> : <MdOutlineMenu />
+                                }
+                             </Button>
                         </div>
 
                         <div className="col-sm-7 d-flex align-item-center justify-content-end part3">
-                            <Button className="rounded-circle mr-3"><MdOutlineLightMode /> </Button>
                             <Button className="rounded-circle mr-3"><FaRegBell/> </Button>
                             
                             <div className="myAccWrapper">
