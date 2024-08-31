@@ -86,6 +86,11 @@ const Home = ()=>{
                             <Button className="linkButtonOnHome" variant="contained">CMM Dashboard 
                                  </Button>
                         </div>
+                        <div className="hd lineBreakAfterDiv">
+                            
+                            <Button className="linkButtonOnHome" variant="contained">Load Home Page 
+                                 </Button>
+                        </div>
                         
                         <div className="row cardFilters mt-3">
                             <div className="col-md-3">
