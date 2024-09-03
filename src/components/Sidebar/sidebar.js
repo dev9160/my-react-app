@@ -45,7 +45,11 @@ const Sidebar = () =>{
                         <div className={`submenuWrapper ${activeTab === 2 && isToggleSubmenu === true ? 'colapse' : 'colapsed'}`}>
                             <ul className='submenu'>
                                 <li> <Link to="/sickMarking">Sick Marking</Link> </li>
+                                <li> <Link to="/updateSickMarking">Update / Discard Sick Marking</Link> </li>
                                 <li> <Link to="/sickRelease">Sick Release</Link> </li>
+                                <li> <Link to="/scheduleMarking">Schedule Marking</Link> </li>
+                                <li> <Link to="/updateScheduleMarking">Update Schedule Marking</Link> </li>
+                                <li> <Link to="/scheduleRelease">Schedule Release</Link> </li>
                             </ul>
                         </div>
                     </li>
@@ -57,7 +61,11 @@ const Sidebar = () =>{
                         <div className={`submenuWrapper ${activeTab === 3 && isToggleSubmenu === true ? 'colapse' : 'colapsed'}`}>
                             <ul className='submenu'>
                                 <li> <Link to="/searchCoach">Search & Edit</Link> </li>
-                                <li> <Link to="/rlyTransfer">Transfer</Link> </li>
+                                <li> <Link to="/rlyTransfer">Railway Transfer</Link> </li>
+                                <li> <Link to="/coachCommission">Coach Commission</Link> </li>
+                                <li> <Link to="/changeCoachType">Change Coach Type</Link> </li>
+                                <li> <Link to="/coachRCondemn">Coach RCondemnation</Link> </li>
+                                <li> <Link to="/coachCondemn">Coach Condemnation</Link> </li>
                             </ul>
                         </div>
                     </li>

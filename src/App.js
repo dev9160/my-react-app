@@ -2,18 +2,29 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header/header';
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import  Home from './pages/Home/home';
+import  Home from './modules/Home/home';
 import Sidebar from './components/Sidebar/sidebar';
 import { createContext, useState, useEffect } from "react";
-import SearchCoach from './pages/CoachMaster/SearchCoach/searchCoach';
-import RlyTransfer from './pages/CoachMaster/RlyTransfer/rlyTransfer';
 
-import Unusual from './pages/CentralApp/Unusual/unusual';
-import DepotInfra from './pages/CentralApp/DepotInfra/depotInfra'
-import SickMarking from './pages/CoachMaint/SickMarking/sickMarking';
-import SickRelease from './pages/CoachMaint/SickRelease/sickRelease'; 
-import RakeMaint from './pages/Rake/RakeMaint/rakeMaint';
-import DeleteRake from './pages/Rake/DeleteRake/deleteRake';
+import SearchCoach from './modules/CoachMaster/SearchCoach/searchCoach';
+import RlyTransfer from './modules/CoachMaster/RlyTransfer/rlyTransfer';
+import CoachCommission from './modules/CoachMaster/CoachCommission/coachCommission';
+import ChangeCoachType from './modules/CoachMaster/CoachTypeChange/changeCoachType';
+import CoachRCondemn from './modules/CoachMaster/CoachCondemnation/coachRCondemn';
+import CoachCondemn from './modules/CoachMaster/CoachCondemnation/coachCondemn';
+
+import Unusual from './modules/CentralApp/Unusual/unusual';
+import DepotInfra from './modules/CentralApp/DepotInfra/depotInfra';
+
+import SickMarking from './modules/CoachMaint/SickMarking/sickMarking';
+import SickRelease from './modules/CoachMaint/SickRelease/sickRelease';
+import UpdateSickMarking from './modules/CoachMaint/SickMarking/updateSickMarking';
+import ScheduleMarking from './modules/CoachMaint/ScheduleMarking/scheduleMarking';
+import UpdateScheduleMarking from './modules/CoachMaint/ScheduleMarking/updateScheduleMarking';
+import ScheduleRelease from './modules/CoachMaint/ScheduleRelease/scheduleRelease'; 
+
+import RakeMaint from './modules/Rake/RakeMaint/rakeMaint';
+import DeleteRake from './modules/Rake/DeleteRake/deleteRake';
 
 
 const MyContext = createContext();
@@ -98,10 +109,18 @@ function App() {
             <Route path="/deleteRake" exact={true} element={<DeleteRake />} />
 
             <Route path="/sickMarking" exact={true} element={<SickMarking />} />
+            <Route path="/updateSickMarking" exact={true} element={<UpdateSickMarking />} />
             <Route path="/sickRelease" exact={true} element={<SickRelease />} />
+            <Route path="/scheduleMarking" exact={true} element={<ScheduleMarking />} />
+            <Route path="/updateScheduleMarking" exact={true} element={<UpdateScheduleMarking />} />
+            <Route path="/scheduleRelease" exact={true} element={<ScheduleRelease />} />
 
             <Route path="/searchCoach" exact={true} element={<SearchCoach />} />
             <Route path="/rlyTransfer" exact={true} element={<RlyTransfer />} />
+            <Route path="/coachCommission" exact={true} element={<CoachCommission />} />
+            <Route path="/changeCoachType" exact={true} element={<ChangeCoachType />} />
+            <Route path="/coachRCondemn" exact={true} element={<CoachRCondemn />} />
+            <Route path="/coachCondemn" exact={true} element={<CoachCondemn />} />
 
             <Route path="/unusual" exact={true} element={<Unusual />} />
             <Route path="/depotInfra" exact={true} element={<DepotInfra />} />
